@@ -1,38 +1,15 @@
 package com.example.user.sam;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageSwitcher;
-import android.widget.ImageView;
-import android.widget.Toast;
-import android.widget.ViewSwitcher;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View.OnClickListener;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View.OnClickListener;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -46,7 +23,7 @@ ImageButton mybutton;
         setContentView(R.layout.activity_main);
 
 
-       mybutton = (ImageButton) findViewById(R.id.mainButton);
+       mybutton = (ImageButton) findViewById(R.id.smartparking);
     mybutton.setOnClickListener(new View.OnClickListener(){
         @Override
         public void onClick(View v){
@@ -55,76 +32,13 @@ ImageButton mybutton;
         }
 
     });
-
-
-    mybutton = (ImageButton) findViewById(R.id.imageButton2);
-    mybutton.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            Intent intentLoadNewActivity = new Intent(MainActivity.this,Main2Activity.class);
-            startActivity(intentLoadNewActivity);
-        }
-
-    });
-
-    mybutton = (ImageButton) findViewById(R.id.imageButton);
-    mybutton.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            Intent intentLoadNewActivity = new Intent(MainActivity.this,Main2Activity.class);
-            startActivity(intentLoadNewActivity);
-        }
-
-    });
-
-    mybutton = (ImageButton) findViewById(R.id.imageButton4);
-    mybutton.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            Intent intentLoadNewActivity = new Intent(MainActivity.this,Main2Activity.class);
-            startActivity(intentLoadNewActivity);
-        }
-
-    });
-
-    mybutton = (ImageButton) findViewById(R.id.imageButton6);
-    mybutton.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            Intent intentLoadNewActivity = new Intent(MainActivity.this,Main2Activity.class);
-            startActivity(intentLoadNewActivity);
-        }
-
-    });
-    mybutton = (ImageButton) findViewById(R.id.imageButton10);
-    mybutton.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick(View v){
-            Intent intentLoadNewActivity = new Intent(MainActivity.this,Main2Activity.class);
-            startActivity(intentLoadNewActivity);
-        }
-
-    });
-
-
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+      /*  ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+              this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
+*/
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
