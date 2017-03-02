@@ -26,7 +26,7 @@ import layout.homeBottom;
 public class HomeActivity  extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, homeBottom.OnFragmentInteractionListener, Slider.OnFragmentInteractionListener{
 
-    ImageButton nav_button;
+    ImageButton nav_button,mobility;
     DrawerLayout mDrawerLayout;
     NavigationView navigationView;
 
@@ -53,6 +53,15 @@ public class HomeActivity  extends AppCompatActivity
                 mDrawerLayout.openDrawer(Gravity.LEFT);
             }
 
+        });
+
+        mobility = (ImageButton) findViewById(R.id.Mobility);
+        mobility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this,Mobility.class);
+                startActivity(intent);
+            }
         });
 
     }

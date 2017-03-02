@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.mobility_top"
+    android:background="@color/bg_screen4">
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:background="@color/bg_screen4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/InnerConstraint"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="146dp">
+
+        <TextView
+            android:text="Mobility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/heading"
+            android:textSize="24sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            app:srcCompat="@drawable/nav_menu"
+            android:id="@+id/nav_but"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="115dp"
+            app:srcCompat="@drawable/mobility2"
+            android:id="@+id/fromToLine"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/heading"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp" />
+
+        <ImageButton
+            android:layout_width="62dp"
+            app:srcCompat="@drawable/mob6"
+            android:id="@+id/getDirections"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_height="52dp" />
+
+        <AutoCompleteTextView
+            android:hint="Source"
+            android:layout_height="wrap_content"
+            android:id="@+id/source"
+            app:layout_constraintRight_toRightOf="@+id/fromToLine"
+            app:layout_constraintLeft_toLeftOf="@+id/fromToLine"
+            app:layout_constraintTop_toTopOf="@+id/fromToLine"
+            android:layout_marginStart="@dimen/autoTextViewLeftMargin"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_width="0dp"
+            android:background="#00000000"/>
+
+        <AutoCompleteTextView
+            android:hint="Destination"
+            android:layout_height="wrap_content"
+            android:id="@+id/destination"
+            app:layout_constraintRight_toRightOf="@+id/fromToLine"
+            app:layout_constraintLeft_toLeftOf="@+id/fromToLine"
+            app:layout_constraintTop_toTopOf="@+id/fromToLine"
+            android:layout_marginStart="@dimen/autoTextViewLeftMargin"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_width="0dp"
+            android:background="#00000000" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InnerConstraint"
+        android:layout_height="50dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill" />
+
+<!--
+        <com.example.user.sam.SlidingTabLayout
+            android:id="@+id/tabs"
+
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/InnerConstraint"
+            android:layout_height="50dp" />
+-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="0dp"
+            android:layout_weight = "1"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+    <!--
+
+ <fragment
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="com.example.user.sam.mobility_slider"
+        android:id="@+id/fragment3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InnerConstraint" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="233dp"
+            app:srcCompat="@drawable/mobility_image1"
+            android:id="@+id/mobility_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="51dp"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editText"
+            app:layout_constraintLeft_toLeftOf="@+id/mobility_image"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintRight_toRightOf="@+id/mobility_image"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editText2"
+            app:layout_constraintLeft_toLeftOf="@+id/editText"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintRight_toRightOf="@+id/mobility_image" />
+
+        <ImageButton
+            android:layout_width="46dp"
+            android:layout_height="47dp"
+            app:srcCompat="@drawable/mobility_directions"
+            android:id="@+id/get_directions"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="@+id/mobility_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="96dp"
+            app:layout_constraintLeft_toRightOf="@+id/mobility_image"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp" />
+    -->
+</android.support.constraint.ConstraintLayout>
